@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">  <!--Importing Google Fonts-->
     <script src="https://kit.fontawesome.com/a3d118256d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <header>
+        <div id="header-container">
 
+        </div>
     </header>
 
     <main>
         <div id="content-container">
 
             <div id="image-container">
-                <img src="/assets/ProfileImage.jpeg" style="max-width: 200px;">
-                <button><i class="fa fa-moon"></i></button>
+                <img src="/assets/ProfileImage.jpeg">
+                <button id="toggle-theme-btn"><i class="fa fa-moon"></i></button>
             </div>
 
             <div id="welcome-text-container">
@@ -32,9 +35,10 @@
                 </p>
 
             </div>
-
+            <h2>Creating</h2>
+            <br>
             <div id="creating-text-container">
-                <h2>Creating</h2>
+            
                 <div class="creating-platform-container">
                     <b>Medium</b>
                     <p>Here, I share my thoughts on topics that interest me-mainly tech, but occasionally other subjects too.</p>
@@ -54,11 +58,14 @@
 
             <div id="elsewhere-container">
                 <h2>Elsewhere</h2>
-            
-                <button><a>Contact</a></button>
-                <button><a>Bluesky</a></button>
-                <button><a>My CV</a></button>
-                <button><a>About Me</a></button>
+                <br>
+                <div id="social-buttons-container">
+                    <button class="social-btn" style="border: solid 2px #DEB8FC;"><a>Contact</a></button>
+                    <button class="social-btn" style="border: solid 2px #58B4D9;"><a>Bluesky</a></button>
+                    <button class="social-btn" style="border: solid 2px #FF4500;"><a>My CV</a></button>
+                    <button class="social-btn" style="border: solid 2px #01E2B7;"><a>About Me</a></button>
+                </div>
+                
                 
             </div>
            
