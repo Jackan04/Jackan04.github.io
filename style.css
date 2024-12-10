@@ -1,137 +1,144 @@
-header{
-    height: 8rem;
-    background: linear-gradient(to right, #FFFFAD, #E9FBFF, #7AB9FF);
-
-}
-
-*{
+/* Global Resets */
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box; /* Include box-sizing to ensure predictable layout */
 }
 
-/* Specific HTML elements */
-
-h2{
-    margin-top: 2rem;
-}
-img{
-    border-radius: 20rem;
-    margin-bottom: 3rem;
-    max-width: 10rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
-
+/* General Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    line-height: 1.6; /* Move global line-height here */
 }
 
-#image-container{
-    display: flex;
-    flex-direction: column;
-    max-width: 10rem;
-    margin-bottom: 3rem;
-}
-
-#toggle-theme-btn{
-    border: none;
-    font-size: 2em;
-    background-color: transparent;
-}
-
-button{
-    transition: transform 0.2s ease-in-out;
-}
-
-button:hover, .social-btn:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    opacity: 0.7;
-}
-
-/* Body Style */
-body.darkmode{
+body.darkmode {
     background-color: #333;
     color: white;
 }
 
-a.darkmode{
-    color: white;
+a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 3px solid #33C18B;
+    transition: opacity 0.2s; /* Add smooth hover transition */
 }
 
-
-body{
-    font-family: 'Nunito', sans-serif;
-    color: #333;
-}
-
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
-p{
-    font-size: 1rem;     
-    line-height: 1.6;    
-    letter-spacing: 0.5px;     
-    margin-bottom: 1.5em;
-
-}
-
-a{
-    color: inherit; 
-    text-decoration: none; 
-    border-bottom: solid 3px #33C18B;
-    
-}
-
-a:hover{
-    opacity: 0.7;
-}
-
+a:hover,
 a:focus {
+    opacity: 0.7;
     outline: none;
 }
 
-
-#content-container{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    max-width: 700px;
+a.darkmode {
+    color: white;
 }
 
-#creating-text-container{
-    display: flex;
-    gap: 1.5rem;
+p {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5em;
+}
+
+/* Typography */
+h2 {
+    margin-top: 2rem;
+}
+
+h1, h2 {
+    font-size: 24px; /* Default for h1 */
+}
+
+@media (max-width: 468px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+/* Buttons */
+button,
+.social-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+    border-radius: 0.7rem ;
 }
 
 .social-btn{
-    padding: 0.9rem;
-    border-radius: 0.8rem;
-    background-color: transparent;
-    transition: transform 0.2s ease-in-out;
-
+    padding: 0.6rem;
+    /* max-width: fit-content; */
 }
 
+button:hover, 
+.social-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.7;
+}
+
+button:active {
+    transform: scale(1); /* Prevent hover sticking on click */
+}
+
+#toggle-theme-btn {
+    font-size: 1.5rem;
+}
+
+#rightNowClose-btn {
+    padding: 0.8rem;
+    border-radius: 7px;
+    border: 2px solid black;
+}
+
+/* Images */
+img {
+    border-radius: 20rem;
+    margin-bottom: 2rem;
+    max-width: 10rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* Containers */
+header {
+    height: 8rem;
+    background: linear-gradient(to right, #FFFFAD, #E9FBFF, #7AB9FF);
+}
+
+
+#social-buttons-container,
+#creating-text-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  
+}
+
+#image-container{
+      flex-direction: column; 
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 3rem;
+
+    }
 
 #social-buttons-container{
     display: flex;
-    gap: 1rem;
 }
 
-.creating-link{
-    border-bottom: solid 3px #33C18B;
-    
+#image-container {
+    max-width: 10rem;
 }
 
-.creating-link:hover{
-    opacity: 0.7;
-    transform: scale(1.2);
+#content-container {
+    margin: 5rem auto;
+    max-width: 700px;
 }
 
-/* Currently Working on Dialog Handling */
+/* Dialog */
 dialog {
     position: fixed;
     top: 50%;
@@ -141,50 +148,46 @@ dialog {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    max-width: 90%; 
-    width: 400px; 
-    z-index: 1000; 
+    max-width: 90%;
+    width: 400px;
+    z-index: 1000;
 }
 
 dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.5); /* Creates a dimming effect for the backdrop */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-#rightNowClose-btn{
-    border: none;
-    padding: 8px;
-    border-radius: 7px;
-    background-color: #58B4D9;
-    color: white;
+/* Layout */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 2rem;
 }
 
-#currentlyWorkingOnLink{
-    border-bottom: solid 4px pink;
-}
-
+/* Media Queries */
 @media (max-width: 468px) {
     p {
         font-size: 16px;
     }
 
-    h1{
-        font-size: 24px;
-    }
-
-    h2{
-        font-size: 18px;
-    }
-
     #social-buttons-container{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        gap: 0.7rem;
         text-align: center;
+        flex-direction: column;
     }
 
     #creating-text-container{
-        display: flex;
         flex-direction: column;
-        gap: 0.7rem;
+    }
+}
+
+/* Disable Hover on Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+    button:hover,
+    .social-btn:hover {
+        transform: none;
+        opacity: 1;
     }
 }

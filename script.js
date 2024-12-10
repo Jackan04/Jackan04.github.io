@@ -46,6 +46,8 @@ rightNowShow.addEventListener("click", function () {
     rightNowDialog.showModal();
 });
 
-rightNowClose.addEventListener("click", function () {
-    rightNowDialog.close();
-});
+
+rightNowClose.addEventListener('click', (event) => {
+    event.preventDefault(); 
+    rightNowDialog.close(); 
+  });
