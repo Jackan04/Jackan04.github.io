@@ -108,6 +108,10 @@ header {
     background: linear-gradient(to right, #FFFFAD, #E9FBFF, #7AB9FF);
 }
 
+body.darkmode header {
+    background: linear-gradient(to right, #3a0ca3, #4361ee, #4cc9f0);
+}
+
 
 #social-buttons-container,
 #creating-text-container {
@@ -136,6 +140,11 @@ header {
 #content-container {
     margin: 5rem auto;
     max-width: 700px;
+}
+
+#closeDialogBtn-container{
+    display: flex;
+    justify-content: end;
 }
 
 /* Dialog */
