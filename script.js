@@ -12,6 +12,13 @@ function applyDarkMode(isDarkMode) {
     icon.classList.toggle('fa-sun', isDarkMode);
     icon.classList.toggle('fa-moon', !isDarkMode);
     icon.style.color = isDarkMode ? 'white' : 'black';
+    
+    // No Dialog element on the Photography-page so need to check that with an if-statement
+    if(dialogs){
+        dialogs.classList.toggle('darkmode', isDarkMode);
+    }
+    
+
 }
 
 // Check and apply saved theme preference
