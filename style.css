@@ -101,7 +101,7 @@ button:active {
 
 /* Images */
 img {
-    max-width: 400px;
+    max-width: 300px;
     max-height: auto;
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
@@ -163,7 +163,6 @@ body.darkmode #gradientFill-Container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
     margin-top: 5rem;
     gap: 2rem;
 }
