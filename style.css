@@ -235,6 +235,10 @@ main {
     #creating-text-container{
         flex-direction: column;
     }
+
+    #imageGallery-container{
+        flex-direction: column;
+    }
 }
 
 /* Disable Hover on Touch Devices */
