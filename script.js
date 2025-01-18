@@ -32,12 +32,6 @@ themeBtn.addEventListener("click", () => {
     localStorage.setItem('darkmode', isDarkMode);
 });
 
-// Add event listener for unfinished page alerts
-unfinishedPageAlerts.forEach((element) => {
-    element.addEventListener("click", () => {
-        alert("Hey there! I'm glad you stopped by my website. This page isn't quite finished yet, but check back soon to learn more about me!");
-    });
-});
 
 // Dialog show/hide functionality
 rightNowShow?.addEventListener("click", () => rightNowDialog?.showModal());

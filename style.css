@@ -118,6 +118,14 @@ img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
+#img-cv{
+    max-width: 80%;
+    max-height: 80%;
+    margin: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    border-radius: 2rem;
+}
+
 /* Containers */
 header {
     display: flex;
@@ -195,6 +203,7 @@ body.darkmode #gradientFill-Container {
     max-width: 800px;
     margin-top: 4rem;
 }
+
 
 /* Dialog */
 dialog {
