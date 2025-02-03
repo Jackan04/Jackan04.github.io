@@ -44,6 +44,7 @@ rightNowClose?.addEventListener("click", (event) => {
     rightNowDialog?.close();
 });
 
+// Scroll to top button function
 document.addEventListener("DOMContentLoaded", function(){
     
     
