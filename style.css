@@ -280,7 +280,7 @@ main {
         align-items: center;
     }
 
-    img{
+    #profileImage{
         max-width: 130px;
     }
 
