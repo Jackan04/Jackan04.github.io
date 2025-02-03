@@ -107,7 +107,7 @@ button:active {
 /* Images */
 img {
     max-width: auto;
-    max-height: 300px;
+    max-height: 200px;
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
 }
@@ -166,6 +166,8 @@ body.darkmode #gradientFill-Container {
 #profileImage-container{
       flex-direction: column; 
       display: flex;
+      justify-content: center;
+      align-items: center;
       gap: 0.5rem;
       margin-bottom: 3rem;
       max-width: 10rem;
@@ -202,6 +204,12 @@ body.darkmode #gradientFill-Container {
     gap: 1.5rem;
     max-width: 800px;
     margin-top: 4rem;
+}
+
+#clock {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: monospace;
 }
 
 
@@ -253,6 +261,14 @@ main {
     #imageGallery-container{
         flex-direction: column;
         align-items: center;
+    }
+
+    img{
+        max-width: 130px;
+    }
+
+    #clock{
+        font-size: 20px;
     }
 }
 
