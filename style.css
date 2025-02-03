@@ -213,6 +213,23 @@ body.darkmode #gradientFill-Container {
 }
 
 
+#toTopBtn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: none; 
+    background-color: #333;
+    border: none;
+    padding: 12px 17px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    
+}
+    
+
+
+
 /* Dialog */
 dialog {
     position: fixed;
