@@ -18,7 +18,11 @@ function applyDarkMode(isDarkMode) {
     icon.style.color = isDarkMode ? 'white' : 'black';
     toTopBtn.style.backgroundColor = isDarkMode ? 'white' : '#333';
     toTopBtn.style.color = isDarkMode ? 'black' : 'white';
-    btnHotKeys.style.color = isDarkMode ? 'white' : 'black';
+
+    if(btnHotKeys){
+        btnHotKeys.style.color = isDarkMode ? 'white' : 'black';
+    }
+
     
     // No Dialog element on the Photography-page so need to check that with an if-statement
     if(dialogs){
@@ -89,14 +93,17 @@ function updateClock() {
 setInterval(updateClock, 60000); // Update every minute
 updateClock(); // Run immediately
 
-btnHotKeys.addEventListener("click", function(){
-    if(hotKeysDialog.open){
-        hotKeysDialog.close()
-    }
-    else{
-        hotKeysDialog.showModal();
-    }
-})
+if(btnHotKeys){
+    btnHotKeys.addEventListener("click", function(){
+        if(hotKeysDialog.open){
+            hotKeysDialog.close()
+        }
+        else{
+            hotKeysDialog.showModal();
+        }
+    })
+}
+
 
 // Hotkey functionality
 document.addEventListener("keydown", function(event){
