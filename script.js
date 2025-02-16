@@ -88,6 +88,14 @@ function updateClock() {
 setInterval(updateClock, 60000); // Update every minute
 updateClock(); // Run immediately
 
+btnHotKeys.addEventListener("click", function(){
+    if(hotKeysDialog.open){
+        hotKeysDialog.close()
+    }
+    else{
+        hotKeysDialog.showModal();
+    }
+})
 
 // Hotkey functionality
 document.addEventListener("keydown", function(event){
