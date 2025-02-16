@@ -98,8 +98,8 @@ button:active {
     transform: scale(1); /* Prevent hover sticking on click */
 }
 
-#toggle-theme-btn {
-    font-size: 1.3rem;
+#toggle-theme-btn, #btn-hotkeys {
+    font-size: 1.2rem;
 }
 
 #rightNowClose-btn {
