@@ -5,7 +5,10 @@ const unfinishedPageAlerts = document.querySelectorAll(".unfinishedPageAlert");
 const rightNowShow = document.querySelector("#rightNowShow-btn");
 const rightNowClose = document.querySelector("#rightNowClose-btn");
 const rightNowDialog = document.querySelector("#rightNow-dialog");
-const toTopBtn = document.querySelector("#toTopBtn")
+const toTopBtn = document.querySelector("#toTopBtn");
+const btnHotKeys = document.querySelector("#btn-hotkeys");
+const hotKeysDialog = document.querySelector("#hotkeys-dialog");
+const body = document.querySelector("body");
 
 // Function to apply dark mode
 function applyDarkMode(isDarkMode) {
@@ -28,11 +31,16 @@ function applyDarkMode(isDarkMode) {
 const savedTheme = localStorage.getItem('darkmode') === 'true';
 applyDarkMode(savedTheme);
 
-// Toggle dark mode and save preference
+// Toggle dark mode and save to localstorage
 themeBtn.addEventListener("click", () => {
     const isDarkMode = !document.body.classList.contains('darkmode');
     applyDarkMode(isDarkMode);
     localStorage.setItem('darkmode', isDarkMode);
+});
+
+window.addEventListener("keydown", function(event){
+
+    
 });
 
 
@@ -65,14 +73,56 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 function updateClock() {
-    const now = new Date();
-    const hours = now.getHours().toString().padStart(2, "0");
-    const minutes = now.getMinutes().toString().padStart(2, "0");
-    
-    document.getElementById("clock").textContent = `${hours}:${minutes}`;
+    const clockWidget = document.querySelector("#clock");
+
+    if(clockWidget){
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, "0");
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        
+        document.getElementById("clock").textContent = `${hours}:${minutes}`;
+    }
+
 }
 
 setInterval(updateClock, 60000); // Update every minute
 updateClock(); // Run immediately
 
 
+// Hotkey functionality
+document.addEventListener("keydown", function(event){
+    
+    if(event.shiftKey){
+
+        switch(event.key){
+
+            case "G":
+                if(hotKeysDialog.open){
+                    hotKeysDialog.close();
+                } else{
+                    hotKeysDialog.showModal();
+                }
+            break;
+
+            case "D":
+                const isDarkMode = !document.body.classList.contains('darkmode');
+                applyDarkMode(isDarkMode);
+                localStorage.setItem('darkmode', isDarkMode);
+            break;
+
+            case "P":
+                window.location.href = "/photos.html";
+            break;
+
+            case "H":
+                window.location.href = "/index.html";
+            break;
+
+            case "C":{
+                window.location.href = "/assets/CV.pdf";
+            }
+        }
+    }
+  
+
+})
