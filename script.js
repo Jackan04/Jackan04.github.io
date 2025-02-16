@@ -112,7 +112,7 @@ document.addEventListener("keydown", function(event){
                 }
             break;
 
-            case "D":
+            case "T":
                 const isDarkMode = !document.body.classList.contains('darkmode');
                 applyDarkMode(isDarkMode);
                 localStorage.setItem('darkmode', isDarkMode);
