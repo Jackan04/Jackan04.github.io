@@ -134,9 +134,9 @@ document.addEventListener("keydown", function(event){
                 window.location.href = "/index.html";
             break;
 
-            case "C":{
-                window.location.href = "/assets/CV.pdf";
-            }
+            case "C":
+            window.location.href = "/assets/CV.pdf";
+            break;
 
             case "M":
                 window.location.href = "mailto: jacob.asker@icloud.com";
