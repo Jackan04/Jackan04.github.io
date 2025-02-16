@@ -129,6 +129,10 @@ document.addEventListener("keydown", function(event){
             case "C":{
                 window.location.href = "/assets/CV.pdf";
             }
+
+            case "M":
+                window.location.href = "mailto: jacob.asker@icloud.com";
+            break;
         }
     }
   
