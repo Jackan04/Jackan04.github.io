@@ -291,6 +291,10 @@ main {
     #clock{
         font-size: 20px;
     }
+
+    #btn-hotkeys{
+        display: none;
+    }
 }
 
 /* Disable Hover on Touch Devices */
