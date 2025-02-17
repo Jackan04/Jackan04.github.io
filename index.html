@@ -71,7 +71,7 @@
             
                     <a class="social-btn" style="border: solid 2px #DEB8FC;" href="mailto: jacob.asker@icloud.com" target="_blank" rel="noopener noreferrer">Contact</a>
                     <a class="social-btn" id="rightNowShow-btn" style="border: solid 2px #01E2B7;" rel="noopener noreferrer">Right Now</a>
-                    <a class="social-btn" style="border: solid 2px #FF4500;" rel="noopener noreferrer" href="/assets/CV.pdf" target="_blank">My CV</a>
+                    <a class="social-btn" id="btn-choose-cv-language" style="border: solid 2px #FF4500;">My CV</a>
             
 
                     <!-- Working on right now Dialog -->
@@ -82,8 +82,8 @@
                                 <p>
                                     This is a circilum that teaches full-stack web development. I'm currently working on the JavaScript section, and I'm learning a lot!
                                 </p>
-                                <div id="closeDialogBtn-container">
-                                    <button id="rightNowClose-btn"><i class="fa fa-times"></i></button>
+                                <div class="closeDialogBtn-container">
+                                    <button class="Close-btn"><i class="fa fa-times"></i></button>
                                 </div>
                                 
                                 
@@ -101,11 +101,24 @@
                                 <p><b>Shift + P</b> - Navigate to the Photography page</p>
                                 <p><b>Shift + C</b> - Navigate to my CV</p>
                                 
-                                <div id="closeDialogBtn-container">
-                                    <button id="hotkeysClose-btn"><i class="fa fa-times"></i></button>
+                                <div class="closeDialogBtn-container">
+                                    <button class="Close-btn"><i class="fa fa-times"></i></button>
                                 </div>
                                 
                                 
+                        </form>
+                    </dialog>
+
+                    <dialog id="cv-language-dialog">
+                        <form id="cv-language-content">
+                            <h3>Choose the preferred language</h3>
+                            <a rel="noopener noreferrer" href="/assets/CV.pdf" target="_blank">Swedish</a>
+                            <a rel="noopener noreferrer" href="/assets/CV (English).pdf" target="_blank">English</a>
+                            
+                            <div class="closeDialogBtn-container">
+                                <button class="Close-btn"><i class="fa fa-times"></i></button>
+                            </div>
+
                         </form>
                     </dialog>
                     

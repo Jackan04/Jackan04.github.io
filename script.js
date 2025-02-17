@@ -9,6 +9,8 @@ const toTopBtn = document.querySelector("#toTopBtn");
 const btnHotKeys = document.querySelector("#btn-hotkeys");
 const hotKeysDialog = document.querySelector("#hotkeys-dialog");
 const body = document.querySelector("body");
+const btnChooseCvLanguage = document.querySelector("#btn-choose-cv-language");
+const dialogChooseCvLanguage = document.querySelector("#cv-language-dialog");
 
 // Function to apply dark mode
 function applyDarkMode(isDarkMode) {
@@ -135,7 +137,13 @@ document.addEventListener("keydown", function(event){
             break;
 
             case "C":
-            window.location.href = "/assets/CV.pdf";
+                if(dialogChooseCvLanguage.open){
+        
+                    dialogChooseCvLanguage.close();
+                }
+                else{
+                    dialogChooseCvLanguage.showModal();
+                }
             break;
 
             case "M":
@@ -143,6 +151,19 @@ document.addEventListener("keydown", function(event){
             break;
         }
     }
+
+   
   
 
-})
+});
+
+btnChooseCvLanguage.addEventListener("click", function(){
+
+    if(dialogChooseCvLanguage.open){
+        
+        dialogChooseCvLanguage.close();
+    }
+    else{
+        dialogChooseCvLanguage.showModal();
+    }
+});

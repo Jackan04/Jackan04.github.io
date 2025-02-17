@@ -102,12 +102,6 @@ button:active {
     font-size: 1.2rem;
 }
 
-#rightNowClose-btn {
-    padding: 0.8rem;
-    border-radius: 7px;
-    border: 2px solid black;
-}
-
 /* Images */
 img {
     max-width: auto;
@@ -195,7 +189,7 @@ body.darkmode #gradientFill-Container {
     max-width: 700px;
 }
 
-#closeDialogBtn-container{
+.closeDialogBtn-container{
     display: flex;
     justify-content: end;
 }
@@ -261,6 +255,14 @@ main {
     align-items: center;
     flex-wrap: wrap;
     margin: 0 2rem;
+}
+
+#cv-language-content{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 /* Media Queries */
