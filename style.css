@@ -258,11 +258,16 @@ main {
 }
 
 #cv-language-content{
-    display: flex;
-    /* flex-direction: column; */
+    /* display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     gap: 20px;
+}
+
+#cv-language-list-container{
+    display: flex;
+    gap: 15px;
 }
 
 /* Media Queries */
