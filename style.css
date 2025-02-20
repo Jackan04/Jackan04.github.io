@@ -2,14 +2,15 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box; /* Include box-sizing to ensure predictable layout */
+    box-sizing: border-box; 
 }
+
 
 /* General Styles */
 body {
     font-family: 'Nunito', sans-serif;
     color: #333;
-    line-height: 1.6; /* Move global line-height here */
+    line-height: 1.6; 
 }
 
 body.darkmode {
@@ -26,7 +27,7 @@ a {
     color: inherit;
     text-decoration: none;
     border-bottom: 3px solid #33C18B;
-    transition: opacity 0.2s; /* Add smooth hover transition */
+    transition: opacity 0.2s; 
 }
 
 nav a{
@@ -56,7 +57,7 @@ h2 {
 }
 
 h1, h2 {
-    font-size: 24px; /* Default for h1 */
+    font-size: 24px; 
 }
 
 @media (max-width: 468px) {
@@ -81,7 +82,7 @@ button,
 
 .social-btn{
     padding: 0.6rem;
-    /* max-width: fit-content; */
+
 }
 
 button:hover, 
@@ -95,7 +96,7 @@ button:focus {
 }
 
 button:active {
-    transform: scale(1); /* Prevent hover sticking on click */
+    transform: scale(1);
 }
 
 #toggle-theme-btn, #btn-hotkeys {
@@ -258,10 +259,7 @@ main {
 }
 
 #cv-language-content{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
+
     gap: 20px;
 }
 
